@@ -86,4 +86,35 @@ function animate() {
 		.to(".experience__border", {
 			width: "100%",
 		});
+
+	const texts = [
+		"1",
+		"2",
+		"3",
+		"4",
+		"5",
+		"6",
+		"7",
+		"8",
+	];
+	const sections = document.querySelectorAll("section");
+	sections.forEach((section, idx) => {
+		ScrollTrigger.create({
+			trigger: section,
+			start: "top center",
+			end: "bottom center",
+			onEnter: () => {
+				gsap.set(".fix", {
+					innerText: texts[idx],
+					// for image URL
+					// attr: {src: texts[idx]}
+				});
+			},
+			onEnterBack: () => {
+				gsap.set(".fix", {
+					innerText: texts[idx],
+				});
+			},
+		});
+	});
 }
