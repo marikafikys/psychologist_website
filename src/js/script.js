@@ -87,16 +87,7 @@ function animate() {
 			width: "100%",
 		});
 
-	const texts = [
-		"1",
-		"2",
-		"3",
-		"4",
-		"5",
-		"6",
-		"7",
-		"8",
-	];
+	const texts = ["1", "2", "3", "4", "5", "6", "7", "8"];
 	const sections = document.querySelectorAll("section");
 	sections.forEach((section, idx) => {
 		ScrollTrigger.create({
@@ -117,4 +108,25 @@ function animate() {
 			},
 		});
 	});
+
+	const tlEducation = gsap.timeline({
+		repeat: -1,
+	});
+
+	tlEducation
+		.from(".education__item", {
+			duration: 1,
+			yPercent: 100,
+			autoAlpha: 0,
+			stagger: 2,
+		})
+		.to(
+			".education__item",
+			{
+				duration: 1,
+				yPercent: -100,
+				stagger: 2,
+			},
+			2
+		);
 }
