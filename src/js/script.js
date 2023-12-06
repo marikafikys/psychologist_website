@@ -198,7 +198,7 @@ function animate() {
 		.to(tlTraining, {
 			duration: 0.6,
 			progress: 1,
-			ease: 'power3.in',
+			ease: "power3.in",
 		});
 
 	ScrollTrigger.create({
@@ -208,5 +208,16 @@ function animate() {
 		end: `bottom+=${tlMain.duration() * 3000} bottom`,
 		pin: true,
 		scrub: 1,
+	});
+
+	gsap.to(".reviews", {
+		yPercent: -110,
+		scrollTrigger: {
+			trigger: ".double-section2",
+			start: "top top",
+			end: "bottom+=70%",
+			scrub: true,
+			pin: true,
+		},
 	});
 }
