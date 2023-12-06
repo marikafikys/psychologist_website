@@ -5,6 +5,43 @@ document.addEventListener("DOMContentLoaded", () => {
 function animate() {
 	gsap.registerPlugin(ScrollTrigger);
 
+	const preloaderPath = document.querySelector("path"),
+		svgPreload = document.querySelector("svg"),
+		pathLength = preloaderPath.getTotalLength();
+
+	gsap.set(svgPreload, {
+		opacity: 0,
+		strokeDasharray: pathLength,
+		strokeDashoffset: pathLength,
+	});
+
+	const tlPreloader = gsap.timeline({});
+
+	tlPreloader
+		.to(".preloader__title", {
+			opacity: 1,
+		})
+		.to(svgPreload, {
+			opacity: 1,
+		})
+		.to(svgPreload, {
+			duration: 2,
+			strokeDashoffset: 0,
+			ease: "power1.in",
+		})
+		.to(
+			".preloader",
+			{
+				duration: 0.6,
+				xPercent: 100,
+				ease: "power3.in",
+			},
+			"+=0.5"
+		)
+		.to(".preloader", {
+			display: "none",
+		});
+
 	gsap.set(".about__bg", {
 		yPercent: 20,
 	});
@@ -87,27 +124,27 @@ function animate() {
 			width: "100%",
 		});
 
-	const texts = ["1", "2", "3", "4", "5", "6", "7", "8"];
-	const sections = document.querySelectorAll("section");
-	sections.forEach((section, idx) => {
-		ScrollTrigger.create({
-			trigger: section,
-			start: "top center",
-			end: "bottom center",
-			onEnter: () => {
-				gsap.set(".fix", {
-					innerText: texts[idx],
-					// for image URL
-					// attr: {src: texts[idx]}
-				});
-			},
-			onEnterBack: () => {
-				gsap.set(".fix", {
-					innerText: texts[idx],
-				});
-			},
-		});
-	});
+	// const texts = ["1", "2", "3", "4", "5", "6", "7", "8"];
+	// const sections = document.querySelectorAll("section");
+	// sections.forEach((section, idx) => {
+	// 	ScrollTrigger.create({
+	// 		trigger: section,
+	// 		start: "top center",
+	// 		end: "bottom center",
+	// 		onEnter: () => {
+	// 			gsap.set(".fix", {
+	// 				innerText: texts[idx],
+	// 				// for image URL
+	// 				// attr: {src: texts[idx]}
+	// 			});
+	// 		},
+	// 		onEnterBack: () => {
+	// 			gsap.set(".fix", {
+	// 				innerText: texts[idx],
+	// 			});
+	// 		},
+	// 	});
+	// });
 
 	const tlEducation = gsap.timeline({
 		repeat: -1,
