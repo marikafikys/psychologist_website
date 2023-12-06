@@ -37,7 +37,7 @@ function animate() {
 		.to(
 			".about__decor",
 			{
-				opacity: 0
+				opacity: 0,
 			},
 			"<"
 		)
@@ -47,5 +47,43 @@ function animate() {
 				yPercent: 0,
 			},
 			"<"
+		);
+
+	const tlAim = gsap.timeline({
+		ease: "power1.out",
+		scrollTrigger: {
+			trigger: ".aim",
+			start: "top top",
+			end: "bottom+=130%",
+			pin: true,
+			scrub: 1,
+		},
+	});
+
+	tlAim
+		.to(
+			".aim__first",
+			{
+				xPercent: -100,
+			},
+			"0.4"
 		)
+		.to(
+			".aim__second",
+			{
+				xPercent: -100,
+			},
+			"<"
+		)
+		.from(".aim__text", {
+			autoAlpha: 0,
+			yPercent: 0,
+		})
+		.from(".experience__item", {
+			autoAlpha: 0,
+			stagger: 0.2,
+		})
+		.to(".experience__border", {
+			width: "100%",
+		});
 }
