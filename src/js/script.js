@@ -3,6 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function animate() {
+	const swiper = new Swiper(".swiper", {
+		loop: true,
+		centeredSlides: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		initialSlide: 1,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+	});
+	
 	gsap.registerPlugin(ScrollTrigger);
 
 	let mediaAnimation = gsap.matchMedia();
@@ -259,6 +271,18 @@ function animate() {
 				pin: true,
 			},
 		});
+
+		// const swiper = new Swiper(".swiper", {
+		// 	loop: true,
+		// 	centeredSlides: true,
+		// 	slidesPerView: 1,
+		// 	spaceBetween: 30,
+		// 	initialSlide: 1,
+		// 	autoplay: {
+		// 		delay: 3000,
+		// 		disableOnInteraction: false,
+		// 	},
+		// });
 	});
 	mediaAnimation.add("(max-width: 1024px)", () => {
 		const preloaderPath = document.querySelector("path"),

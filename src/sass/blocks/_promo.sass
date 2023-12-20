@@ -21,7 +21,7 @@
     width: 100%
     height: 100vh
     z-index: 10
-    svg 
+    svg
         stroke-width: 2px
         height: 300px
         display: flex
@@ -36,9 +36,9 @@
 
 .promo
     padding-top: 155px
-    @include sm 
+    @include sm
         padding-bottom: 100px
-    
+
 .about
     position: relative
     height: 130vh
@@ -47,16 +47,16 @@
     display: flex
     align-items: center
     justify-content: center
-    @include sm 
+    @include sm
         height: auto
         padding-top: 500px
         padding-bottom: 150px
         overflow: hidden
-    @include xs 
+    @include xs
         padding-top: 320px
-    @include xxs 
+    @include xxs
         padding: 202px 0 45px 0
-    &__bg 
+    &__bg
         position: absolute
         width: 100vw
         height: 130vh
@@ -67,7 +67,7 @@
         align-items: flex-start
         justify-content: center
         overflow: hidden
-        @include sm 
+        @include sm
             left: 0
             width: 100%
             height: 100%
@@ -83,7 +83,7 @@
     &__photo
         width: 100%
         height: 100%
-        @include sm 
+        @include sm
             width: 100%
             height: 100%
     &__decor
@@ -92,15 +92,15 @@
         top: 0
         width: 100%
         height: 100%
-        @include sm 
+        @include sm
             display: none
-    &__wrap 
+    &__wrap
         position: relative
         max-width: 1240px
         display: flex
         flex-direction: column
         align-items: center
-        @include sm 
+        @include sm
             max-width: 450px
         @include xxs
             padding: 0 16px
@@ -112,29 +112,29 @@
         display: flex
         flex-direction: column
         color: $light-color!important
-        span 
+        span
             align-self: flex-end
-        @include sm 
+        @include sm
             width: 100%
-        @include xxs 
+        @include xxs
             width: 250px
-    &__list 
+    &__list
         margin-bottom: 50px
         display: flex
         flex-direction: column
-        align-items: center 
-    &__item 
+        align-items: center
+    &__item
         color: $light-color
         &:not(:last-child)
             margin-bottom: 10px
-        @include xxs 
+        @include xxs
             text-align: center
-    &__link 
+    &__link
         position: relative
         text-transform: uppercase
         font-family: $co-light
         color: $light-color
-        &:after 
+        &:after
             content: ''
             position: absolute
             bottom: -2px
@@ -142,14 +142,14 @@
             width: 100%
             height: 1px
             background: $accent-color
-        @include xxs 
+        @include xxs
             font-size: 16px
 
 .aim
     min-height: 100vh
     padding-bottom: 150px
     padding-top: 150px
-    @include md 
+    @include md
         padding-bottom: 80px
         padding-top: 80px
     &__title
@@ -157,17 +157,17 @@
         width: 100%
         display: flex
         overflow: hidden
-        @include sm 
+        @include sm
             margin-bottom: 60px
             flex-direction: column
-        @include xxs 
+        @include xxs
             max-width: 280px
     &__first
         flex: 0 0 100%
         display: flex
         justify-content: center
         white-space: nowrap
-        @include sm 
+        @include sm
             flex-direction: column
     &__second
         flex: 0 0 100%
@@ -176,9 +176,9 @@
         white-space: nowrap
         span
             margin-left: 15px
-        @include sm 
+        @include sm
             flex-direction: column
-            span 
+            span
                 margin-left: 0
     &__text
         max-width: 585px
@@ -188,20 +188,20 @@
         line-height: 135%
         visibility: hidden
 
-.experience 
+.experience
     padding-top: 20px
     position: relative
     width: 100%
-    display: grid 
+    display: grid
     grid-template-columns: repeat(4, 1fr)
     gap: 104px
-    @include md 
+    @include md
         gap: 50px
-    @include sm 
+    @include sm
         gap: 30px
-    @include xs 
+    @include xs
         grid-template-columns: repeat(2, 1fr)
-    @include xxs 
+    @include xxs
         grid-template-columns: 1fr
     &__item
         visibility: hidden
@@ -215,24 +215,24 @@
         opacity: 0.5
     &__num
         margin-bottom: 10px
-        font-size: 50px 
+        font-size: 50px
         font-family: $co-light
         font-variant-numeric: lining-nums tabular-nums
-        @include sm 
+        @include sm
             font-size: 40px
-        @include xxs 
+        @include xxs
             font-size: 30px
 
 .education
     padding: 150px 0
-    @include md 
+    @include md
         padding: 80px 0
     &__title
         margin-bottom: 60px
         text-align: center
-    &__list 
+    &__list
         position: relative
-        max-width: 550px 
+        max-width: 550px
         margin: 0 auto
         min-height: 80px
         overflow: hidden
@@ -259,17 +259,17 @@
     height: 100vh
     background: $light-color
     z-index: 2
-    @include sm 
+    @include sm
         position: relative
         height: auto
-    @include xs 
+    @include xs
         padding-top: 80px
         padding-bottom: 80px
     &__title
         margin-bottom: 100px
-        @include sm 
+        @include sm
             text-align: center
-        @include xxs 
+        @include xxs
             margin-bottom: 60px
     &__wrap
         position: relative
@@ -282,11 +282,11 @@
     &__item
         position: absolute
         flex: 0 0 100%
-        height: 200px 
+        height: 200px
         font-style: italic
         color: $accent-color!important
         letter-spacing: -0.04em
-        @include sm 
+        @include sm
             position: relative
             visibility: hidden
             text-align: center
@@ -296,16 +296,16 @@
 .training
     position: absolute
     top: 0
-    left: 0 
+    left: 0
     height: 100vh
     width: 100vw
     padding: 50px 0 100px 0
     background: $main-color
     z-index: 1
-    @include sm 
+    @include sm
         position: relative
         height: auto
-    @include xxs        
+    @include xxs
         padding-bottom: 40px
     .container
         height: 100%
@@ -316,16 +316,16 @@
         height: 100px
         text-align: center
         color: $light-color!important
-        @include sm 
+        @include sm
             margin-top: 60px
             position: relative
             height: auto
 
-.training-item 
+.training-item
     padding: 20px 0
     position: relative
     cursor: pointer
-    &:after 
+    &:after
         content: ''
         position: absolute
         top: 0px
@@ -335,7 +335,7 @@
         background: #F2F2F2
         opacity: 0.5
     &:last-child
-        &:before 
+        &:before
             content: ''
             position: absolute
             bottom: 0px
@@ -349,10 +349,10 @@
             opacity: 1
             z-index: 2
             transition: opacity 0.3s ease-in-out
-        
+
         .training-item__title
             opacity: 0
-            
+
     &__title
         position: relative
         font-family: $gilroy
@@ -374,9 +374,9 @@
         opacity: 0
         z-index: -1
         text-overflow: ellipsis
-        @include sm 
+        @include sm
             font-size: 16px
-        @include xs 
+        @include xs
             font-size: 14px
 
 .double-section2
@@ -394,7 +394,7 @@
     align-items: center
     z-index: 2
     background: $main-color
-    @include sm 
+    @include sm
         position: relative
         height: auto
         padding: 40px 0 90px 0
@@ -408,19 +408,19 @@
         display: flex
         flex-direction: column
         align-items: flex-start
-        @include sm 
+        @include sm
             margin-top: 100px
-        @include xxs 
+        @include xxs
             margin-left: 0
             margin-top: 60px
     &__title
         color: $light-color!important
-        @include sm 
+        @include sm
             max-width: 600px
-    &__link 
+    &__link
         &:not(:last-child)
             margin-bottom: 10px
-        color: $light-color
+            color: $light-color
 
 .reviews
     min-height: 100vh
@@ -429,34 +429,43 @@
     padding-top: 150px
     background: $light-color
     z-index: 3
-    @include md 
+    @include md
         padding-top: 100px
-    @include sm 
+    @include sm
         min-height: auto
         padding-bottom: 100px
+    &__title
+        margin-bottom: 100px
+        text-align: center
+        @include xxs
+            margin-bottom: 40px
     &__row
         width: 100%
         overflow: hidden
-    &__wrap 
+    &__wrap
         padding-top: 20px
         border-top: 1px solid rgba(145, 4, 72, 0.5)
         display: flex
     &__chapter
         margin-right: 3.4%
-        flex: 0 0 30%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 100%
         color: $main-color
-        @include sm 
-
+        @include sm
             font-size: 16px
-        @include xxs 
-            flex: 0 0 55%
+        @include xxs
             margin-right: 5%
-        
-    &__name 
-        margin-top: 15px
+    &__info
+        max-width: 500px
+        font-size: 18px
+        @include xxs
+            width: 90%
+    &__name
+        max-width: 500px
+        margin-top: 25px
         color: rgba(17, 12, 13, 0.50)
-    &__title
-        margin-bottom: 100px
-        text-align: center
-
-
+        @include xxs
+            width: 90%
