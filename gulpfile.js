@@ -1,4 +1,5 @@
 const gulp = require("gulp");
+const deploy = require("gulp-gh-pages");
 const browserSync = require("browser-sync");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify-es").default;
@@ -39,7 +40,7 @@ const html = function () {
 const scripts = function () {
 	return gulp
 		.src([
-			'node_modules/swiper/swiper-bundle.min.js',
+			"node_modules/swiper/swiper-bundle.min.js",
 			"node_modules/gsap/dist/gsap.min.js",
 			"node_modules/gsap/dist/ScrollTrigger.min.js",
 			"src/js/**/*.js",
@@ -91,6 +92,10 @@ const watch = function () {
 	gulp.watch("src/img/**/*").on("all", gulp.parallel(images));
 	gulp.watch("src/img/**/*.{png,jpg,jpeg}", gulp.parallel(webpImages));
 };
+
+gulp.task("deploy", function () {
+	return gulp.src("./dist/**/*").pipe(deploy());
+});
 
 exports.server = server;
 exports.styles = styles;
